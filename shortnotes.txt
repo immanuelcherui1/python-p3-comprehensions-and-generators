@@ -1,0 +1,29 @@
+
+            List Comprehensions and Generator Expressions:
+
+List Comprehensions:
+    A list comprehension allows us to instantiate a list object and perform a for loop to populate its values in a single line. Because the contents of our original for loop are straightforward, we can rewrite them on a single line without making our code hard to read.
+       Example:
+         squared_minus_one = [(n **2) - 1 for n in range(1, 11)]
+    
+    The syntax of a list comprehension is as follows:
+        new_list = [optional_operation(item) for item in old_list if optional_condition == True]
+
+Generator Expressions:
+    Generator expressions are very similar to list comprehensions. They use almost identical syntax to produce iterable objects in a single line.
+
+        # A list comprehension uses square brackets
+        # A generator expression uses parentheses
+
+            list_comprehension = [n for n in range(10)]
+            generator_expression = (n for n in range(10))
+            
+        # Looping on both expressions,they shows values..
+        BUT:
+            Generator expressions produce generator objects instead of lists. In most code that you will write, list comprehensions are preferable.
+        
+    The key difference between list comprehensions and generator expressions is that list comprehensions create new, complete lists while generator expressions save the code to create new, complete lists.
+
+    Because list comprehensions create the lists as soon as they are read by the interpreter, their data is easily accessible. A list is much faster to use than a generator.
+
+import sys >>>>>> # sys allows us to look into system memory, among other things
